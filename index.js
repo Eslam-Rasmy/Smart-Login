@@ -7,7 +7,9 @@ var btn2 = document.getElementById("btn2")
 var productCountainer = [];
 var productEmail2 = document.getElementById("gma");
 var productPass2 = document.getElementById("pac");
-var logout = document.getElementById("logout")
+var logout = document.getElementById("logout");
+var ico = document.querySelector(".at1");
+var ico1 = document.querySelector(".at2");
 
 
 if (localStorage.getItem("products") !== null) {
@@ -53,11 +55,11 @@ btnn?.addEventListener("click", function (e) {
 
     } else {
         Swal.fire({
-            title: "Site Name or email is not valid, Please follow the rules below :",
+            title: "Your Name or email is not valid, Please follow the rules below :",
             icon: "question",
             iconHtml: "?",
-            confirmButtonText: "Site name must contain at least 3 characters",
-            cancelButtonText: "Site email must (gmail.com or yahoo.com)",
+            confirmButtonText: "Your name must contain at least 3 numbers",
+            cancelButtonText: "Your email must (gmail.com or yahoo.com)",
             showCancelButton: true,
             showCloseButton: true
         });
@@ -120,6 +122,7 @@ if (window) {
 
 
 function validateForm(ele) {
+    ico.classList.replace("d-none","d-block");
     var regex = {
         Name: /^[A-z]{3,10}( [A-z]{1,10}){0,1}$/,
         productEmail: /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com)$/,
@@ -136,6 +139,23 @@ function validateForm(ele) {
         return false;
     }
 }
+
+ico?.addEventListener("mousedown", function(){
+    productPass.setAttribute("type" ,"text");
+})
+ico?.addEventListener("mouseup", function(){
+    productPass.setAttribute("type" ,"password");
+})
+
+productPass2?.addEventListener("keypress" ,function(){
+    ico1.classList.replace("d-none","d-block");
+})
+ico1?.addEventListener("mousedown", function(){
+    productPass2.setAttribute("type" ,"text");
+})
+ico1?.addEventListener("mouseup", function(){
+    productPass2.setAttribute("type" ,"password");
+})
 
 logout?.addEventListener("click", function (e) {
     e.preventDefault();
