@@ -137,8 +137,8 @@ function validateForm(ele) {
         ele.nextElementSibling.classList.remove("d-none", "fa-check", "text-bg-success");
         return false;
     }
-}
-
+}   
+ 
 ico?.addEventListener("mousedown", function(){
     productPass.setAttribute("type" ,"text");
 })
