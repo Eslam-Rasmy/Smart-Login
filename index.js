@@ -122,7 +122,6 @@ if (window) {
 
 
 function validateForm(ele) {
-    ico.classList.replace("d-none","d-block");
     var regex = {
         Name: /^[A-z]{3,10}( [A-z]{1,10}){0,1}$/,
         productEmail: /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com)$/,
@@ -149,6 +148,9 @@ ico?.addEventListener("mouseup", function(){
 
 productPass2?.addEventListener("keypress" ,function(){
     ico1.classList.replace("d-none","d-block");
+})
+productPass?.addEventListener("keypress" ,function(){
+    ico.classList.replace("d-none","d-block");
 })
 ico1?.addEventListener("mousedown", function(){
     productPass2.setAttribute("type" ,"text");
