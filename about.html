@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <link rel="shortcut icon" href="./user.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container login-box">
+      <div class="row">
+        <h2 class="p-0 text-light text-center">Smart login</h2>
+        <div>
+          <div class="user-box position-relative">
+            <input
+              id="Name"
+              type="text"
+              name="Name"
+              class="w-100 is-valid"
+              oninput="validateForm(this)"
+              autocomplete="off"
+            />
+            <i class="fa-solid d-none"></i>
+            <label for="Name">Enter your name</label>
+          </div>
+          <div class="user-box position-relative">
+            <input
+              id="productEmail"
+              type="text"
+              name="email"
+              class="w-100"
+              oninput="validateForm(this)"
+              autocomplete="off"
+            />
+            <i class="fa-solid d-none"></i>
+            <label for="email">Enter your Email</label>
+          </div>
+          <div class="user-box position-relative">
+            <input
+              id="productPass"
+              type="password"
+              name="password"
+              class="w-100"
+              oninput="validateForm(this)"
+              autocomplete="off"
+            />
+            <i class="fa-solid d-none"></i>
+            <label for="password">Enter Password</label>
+          </div>
+            <p class="text-center text-success fs-4 d-none" id="par">sucess</p>
+          <a
+            href=""
+            class="box position-relative d-inline-block pt-1 pb-1 ps-2 pe-2 mt-5"
+            id="btnn"
+          >
+            <span class="position-absolute d-block"></span>
+            <span class="position-absolute d-block"></span>
+            <span class="position-absolute d-block"></span>
+            <span class="position-absolute d-block"></span>
+            SIGN UP
+          </a>
+
+          <p class="lead text-light text-center">
+            Don’t have an account? <br />
+            <a href="./index.html" id="demo2" class="pt-1 pb-1 ps-2 pe-2">
+              SIGN IN</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+   <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js
+    "></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
